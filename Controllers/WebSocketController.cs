@@ -26,6 +26,12 @@ public class WebSocketController : ControllerBase
 
         while (!receiveResult.CloseStatus.HasValue)
         {
+            //await webSocket.SendAsync(
+            //    new ArraySegment<byte>(buffer, 0, receiveResult.Count),
+            //    receiveResult.MessageType,
+            //    receiveResult.EndOfMessage,
+            //    CancellationToken.None);
+
             receiveResult = await webSocket.ReceiveAsync(
                 new ArraySegment<byte>(buffer), CancellationToken.None);
         }
