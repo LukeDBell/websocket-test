@@ -3,6 +3,7 @@ using System.Net.WebSockets;
 
 public class WebSocketController : ControllerBase
 {
+    [HttpGet]
     [Route("/ws")]
     public async Task Get()
     {
