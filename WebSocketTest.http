@@ -1,6 +1,0 @@
-@WebSocketTest_HostAddress = http://localhost:5063
-
-GET {{WebSocketTest_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
